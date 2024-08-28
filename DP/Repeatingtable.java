@@ -1,7 +1,7 @@
-package DP;
+// package DP;
 
-public class Repeatingtable {
-    public static void main(String[] args) {
-        int[][]
-    }
-}
+// public class Repeatingtable {
+//     public static void main(String[] args) {
+//         int[][]
+//     }
+// }
