@@ -1,0 +1,101 @@
+package LeetCode;
+public class CountIsland2Grids {
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        int[][] grid1 = {
+            {1, 1, 0, 0, 0},
+            {1, 1, 0, 0, 0},
+            {0, 0, 1, 1, 0},
+            {0, 0, 1, 1, 1},
+            {0, 0, 0, 0, 0}
+        };
+        int[][] grid2 = {
+            {1, 1, 0, 0, 0},
+            {0, 1, 0, 0, 0},
+            {0, 0, 1, 1, 0},
+            {0, 0, 0, 1, 1},
+            {0, 0, 0, 0, 0}
+        };
+        int result = solution.countSubIslands(grid1, grid2);
+        System.out.println("Number of sub-islands: " + result);
+    }
+}
+class Solution {
+    public int countSubIslands(int[][] grid1, int[][] grid2) {
+        int n = grid1.length;
+        int m = grid1[0].length;
+        int c = 0;
+        for(int i = 0;i<n;i++)
+        {
+            for(int j = 0;j<m;j++)
+            {
+                if(grid2[i][j]!=grid1[i][j])
+                {
+                    mark(i,j,grid1,grid2,n,m);
+                }
+            }
+        }
+        for(int i = 0;i<n;i++)
+        {
+            for(int j = 0;j<m;j++)
+            {
+                if(grid2[i][j]==1)
+                {
+                    count(i,j,grid2,n,m);
+                    c++;
+                }
+            }
+        }
+        return c;
+    }
+    private static boolean mark(int i,int j,int[][] grid1,int[][] grid2,int n,int m)
+    {
+        if(i>=0&&i<n&&j>=0&&j<m&&grid2[i][j]==1)
+        {
+            grid2[i][j] = 0;
+            if(mark(i, j+1,grid1, grid2, n,m))
+            {
+                return true;
+            }
+            if(mark(i+1, j,grid1,grid2, n,m))
+            {
+                return true;
+            }
+            if(mark(i-1, j,grid1, grid2, n,m))
+            {
+                return true;
+            }
+            if(mark(i, j-1,grid1, grid2, n,m))
+            {
+                return true;
+            }       
+            return false;
+        }
+        return false;
+    }
+    private static boolean count(int i,int j,int[][] grid2,int n,int m)
+    {
+        if(i>=0&&i<n&&j>=0&&j<m&&grid2[i][j]==1)
+        {
+            grid2[i][j] = 0;
+            if(count(i+1, j,grid2, n,m))
+            {
+                return true;
+            }
+            if(count(i-1, j, grid2, n,m))
+            {
+                return true;
+            }
+            if(count(i, j+1, grid2, n,m))
+            {
+                return true;
+            }
+            if(count(i, j-1, grid2, n,m))
+            {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+}
