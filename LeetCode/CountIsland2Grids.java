@@ -1,7 +1,8 @@
 package LeetCode;
+
 public class CountIsland2Grids {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        // Define the grids
         int[][] grid1 = {
             {1, 1, 0, 0, 0},
             {1, 1, 0, 0, 0},
@@ -16,86 +17,60 @@ public class CountIsland2Grids {
             {0, 0, 0, 1, 1},
             {0, 0, 0, 0, 0}
         };
-        int result = solution.countSubIslands(grid1, grid2);
+        
+        // Create an instance of CountIsland2Grids and call countSubIslands
+        CountIsland2Grids instance = new CountIsland2Grids();
+        int result = instance.countSubIslands(grid1, grid2);
         System.out.println("Number of sub-islands: " + result);
     }
-}
-class Solution {
+
+    // Method to count sub-islands
     public int countSubIslands(int[][] grid1, int[][] grid2) {
         int n = grid1.length;
         int m = grid1[0].length;
         int c = 0;
-        for(int i = 0;i<n;i++)
-        {
-            for(int j = 0;j<m;j++)
-            {
-                if(grid2[i][j]!=grid1[i][j])
-                {
-                    mark(i,j,grid1,grid2,n,m);
+        
+        // Remove parts of grid2 that are not sub-islands
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid2[i][j] != grid1[i][j]) {
+                    mark(i, j, grid1, grid2, n, m);
                 }
             }
         }
-        for(int i = 0;i<n;i++)
-        {
-            for(int j = 0;j<m;j++)
-            {
-                if(grid2[i][j]==1)
-                {
-                    count(i,j,grid2,n,m);
+        
+        // Count the remaining islands in grid2 which are sub-islands
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid2[i][j] == 1) {
+                    count(i, j, grid2, n, m);
                     c++;
                 }
             }
         }
+        
         return c;
     }
-    private static boolean mark(int i,int j,int[][] grid1,int[][] grid2,int n,int m)
-    {
-        if(i>=0&&i<n&&j>=0&&j<m&&grid2[i][j]==1)
-        {
+
+    // Helper method to mark cells that are not part of sub-islands
+    private void mark(int i, int j, int[][] grid1, int[][] grid2, int n, int m) {
+        if (i >= 0 && i < n && j >= 0 && j < m && grid2[i][j] == 1) {
             grid2[i][j] = 0;
-            if(mark(i, j+1,grid1, grid2, n,m))
-            {
-                return true;
-            }
-            if(mark(i+1, j,grid1,grid2, n,m))
-            {
-                return true;
-            }
-            if(mark(i-1, j,grid1, grid2, n,m))
-            {
-                return true;
-            }
-            if(mark(i, j-1,grid1, grid2, n,m))
-            {
-                return true;
-            }       
-            return false;
+            mark(i, j + 1, grid1, grid2, n, m);
+            mark(i + 1, j, grid1, grid2, n, m);
+            mark(i - 1, j, grid1, grid2, n, m);
+            mark(i, j - 1, grid1, grid2, n, m);
         }
-        return false;
     }
-    private static boolean count(int i,int j,int[][] grid2,int n,int m)
-    {
-        if(i>=0&&i<n&&j>=0&&j<m&&grid2[i][j]==1)
-        {
+
+    // Helper method to count and mark the islands in grid2
+    private void count(int i, int j, int[][] grid2, int n, int m) {
+        if (i >= 0 && i < n && j >= 0 && j < m && grid2[i][j] == 1) {
             grid2[i][j] = 0;
-            if(count(i+1, j,grid2, n,m))
-            {
-                return true;
-            }
-            if(count(i-1, j, grid2, n,m))
-            {
-                return true;
-            }
-            if(count(i, j+1, grid2, n,m))
-            {
-                return true;
-            }
-            if(count(i, j-1, grid2, n,m))
-            {
-                return true;
-            }
-            return false;
+            count(i + 1, j, grid2, n, m);
+            count(i - 1, j, grid2, n, m);
+            count(i, j + 1, grid2, n, m);
+            count(i, j - 1, grid2, n, m);
         }
-        return false;
     }
 }

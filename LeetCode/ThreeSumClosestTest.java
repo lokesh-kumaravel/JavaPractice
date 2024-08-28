@@ -6,7 +6,7 @@ public class ThreeSumClosestTest {
     // Solution class with the threeSumClosest method
     static class Solution {
         public int threeSumClosest(int[] nums, int target) {
-            Arrays.sort(nums);
+            Arrays.sort(nums);      
             int res = 0;
             int n = nums.length;
             int gap = Integer.MAX_VALUE;
