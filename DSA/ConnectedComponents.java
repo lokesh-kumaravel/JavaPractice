@@ -27,7 +27,7 @@ public class ConnectedComponents {
         {
             if(!visited.get(i))
             {
-            BFS(i,n,visited);
+                BFS(i,n,visited);
             if(visited.contains(false))
             {
                 c++;

@@ -13,13 +13,13 @@ public class BFS {
         addedge(2,3);
         addedge(1,2);
         addedge(3,4);
-        addedge(0,4);   
+        addedge(0,4);
         addedge(1,4);   
         BFSOperation(0);
-        // for(int i = 0;i<list.size();i++)
-        // {
-        //     System.out.println(list.get(i));
-        // }
+        for(int i = 0;i<list.size();i++)
+        {
+            System.out.println(list.get(i));
+        }
     }
     private static void addedge(int u,int v)
     {
