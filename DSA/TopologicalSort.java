@@ -30,7 +30,6 @@ public class TopologicalSort {
                 dfs(neighbor, adjList, visited, stack);
             }
         }
-        
         stack.push(node);
     }
     
