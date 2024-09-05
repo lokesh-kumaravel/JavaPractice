@@ -4,6 +4,7 @@ import java.util.*;
 
 class Solution {
     public int[][] modifiedGraphEdges(int n, int[][] edges, int source, int destination, int target) {
+        @SuppressWarnings("unchecked")
         List<int[]>[] adjacencyList = new ArrayList[n];
         for (int i = 0; i < n; i++) {
             adjacencyList[i] = new ArrayList<>();
@@ -34,6 +35,7 @@ class Solution {
         return edges;
     }
 
+    @SuppressWarnings("unused")
     private void runDijkstra(List<int[]>[] adjacencyList, int[][] edges, int[][] distances, int source, int difference, int run) {
         int n = adjacencyList.length;
         PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
