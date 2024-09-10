@@ -69,3 +69,55 @@ public class LinkedListGCD {
         printList(head);
     }
 }
+
+
+
+// class Solution {
+//     public ListNode insertGreatestCommonDivisors(ListNode head) {
+//         ListNode current = head;
+//         int n = 0;
+//         while(current!=null)
+//         {
+//             n++;
+//             current = current.next;
+//         }
+//         int[] a = new int[n];
+//         int[] gcd = new int[n];
+//         int index = 0;
+//         current = head;
+//         while(current!=null)
+//         {
+//             a[index++] = current.val;
+//             current = current.next;
+//         }
+//         index = 0;
+//         for(int i = 0;i<n-1;i++)
+//         {
+//             int val = 0;
+//             for(int j = 1;j<=a[i]&&j<=a[i+1];j++)
+//             {
+//                 if(a[i]%j==0&&a[i+1]%j==0)
+//                 {
+//                     val = j;
+//                 }
+//             }
+//             gcd[index++] = val;
+//         }
+//         current = head;
+//         index = 0;
+//         while(current!=null)
+//         {
+//             if(index>=n-1)
+//             {
+//                 break;
+//             }
+//             ListNode node = new ListNode(gcd[index]);
+//             index++;
+//             ListNode prev = current.next;
+//             current.next = node;
+//             node.next = prev;
+//             current = current.next.next;
+//         }
+//         return head;
+//     }
+// }
