@@ -26,7 +26,6 @@ public class uncommonFromSentences {
         
         String[] result = uncommonWords.toArray(new String[0]);
         
-        // Print the result
         for (String word : result) {
             System.out.println(word);
         }
