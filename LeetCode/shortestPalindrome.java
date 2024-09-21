@@ -4,7 +4,7 @@ package LeetCode;
 //Hard 214
 public class shortestPalindrome {
     public static void main(String[] args) {
-        String s = "abc"; // Example input
+        String s = "abc"; 
         String t = new StringBuilder(s).reverse().toString();
 
         for (int i = 0; i < t.length(); i++) {
