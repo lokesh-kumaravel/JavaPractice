@@ -4,8 +4,8 @@ import java.util.*;
 
 public class CheckInclusion {
     public static void main(String[] args) {
-        String s1 = "abc"; // Example input
-        String s2 = "oidbcaf"; // Example input
+        String s1 = "abc"; 
+        String s2 = "oidbcaf";
 
         if (s1.length() > s2.length()) {
             System.out.println(false);
