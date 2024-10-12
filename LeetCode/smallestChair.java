@@ -7,7 +7,6 @@ public class smallestChair {
         int[][] times = {{0, 10}, {1, 2}, {2, 3}, {5, 10}};
         int targetFriend = 0;
 
-        // Implementing the logic directly in the main function
         int targetStart = times[targetFriend][0];
         Arrays.sort(times, (a, b) -> a[0] - b[0]);
 
