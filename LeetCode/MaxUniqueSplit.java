@@ -8,7 +8,6 @@ class find {
         Set<String> set = new HashSet<String>();
         return backtrack(0, s, set);
     }
-
     private int backtrack(int start, String s, Set<String> set) {
         if (s.length() == start) {
             return 0;
