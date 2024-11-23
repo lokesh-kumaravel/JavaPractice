@@ -1,4 +1,5 @@
 package DP;
+
 public class Animal {
     public static int[][] a = {
             { 0, 1, 1, 1, 0, 1, 1, 1, 1, 1 },
@@ -39,8 +40,8 @@ public class Animal {
                 findMinPath(i, 0, 0);
             }
         }
-        System.out.println("Shortest Path: "+mainCount);
-        System.out.println("Sense: "+sense);
+        System.out.println("Shortest Path: " + mainCount);
+        System.out.println("Sense: " + sense);
         System.out.println("\nFinal Solution Matrix: ");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -49,46 +50,38 @@ public class Animal {
             System.out.println();
         }
         int row = -1;
-    for(int i = 0;i<n;i++)
-    {
-        if(a[i][0]==9)
-        {
-            row = i;
-        break;
+        for (int i = 0; i < n; i++) {
+            if (a[i][0] == 9) {
+                row = i;
+                break;
+            }
         }
+        System.out.println("\nFinal Vertices:");
+        findVertices(row, 0);
     }
-    System.out.println("\nFinal Vertices:");
-    findVertices(row,0);
-    }
-    private static boolean findVertices(int i,int j)
-    {
-        if(j==n-1&&mainsolution[i][j]==9)
-        {
-            int row = i+1;
-            int column = j+1;
-            System.out.println(row +","+ column);
+
+    private static boolean findVertices(int i, int j) {
+        if (j == n - 1 && mainsolution[i][j] == 9) {
+            int row = i + 1;
+            int column = j + 1;
+            System.out.println(row + "," + column);
             return true;
         }
-        if(i>=0&&i<n&&j>=0&&j<n&&mainsolution[i][j]==9)
-        {
-            int row = i+1;
-            int column = j+1;
-            System.out.println(row +","+ column);
+        if (i >= 0 && i < n && j >= 0 && j < n && mainsolution[i][j] == 9) {
+            int row = i + 1;
+            int column = j + 1;
+            System.out.println(row + "," + column);
             mainsolution[i][j] = 8;
-            if(findVertices(i,j+1))
-            {
+            if (findVertices(i, j + 1)) {
                 return true;
             }
-            if(findVertices(i-1,j))
-            {
+            if (findVertices(i - 1, j)) {
                 return true;
             }
-            if(findVertices(i,j-1))
-            {
+            if (findVertices(i, j - 1)) {
                 return true;
             }
-            if(findVertices(i+1,j))
-            {
+            if (findVertices(i + 1, j)) {
                 return true;
             }
             mainsolution[i][j] = 9;
@@ -96,6 +89,7 @@ public class Animal {
         }
         return false;
     }
+
     private static boolean findMinPath(int i, int j, int count) {
         if (j == n - 1 && a[i][j] == 1) {
             // mainCount = count;
