@@ -1,4 +1,5 @@
 package LeetCode;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,15 +31,15 @@ public class RemoveSolutions {
         RemoveSolutions RemoveStones = new RemoveSolutions();
 
         // Example 1
-        int[][] stones1 = { {0, 0}, {0, 1}, {1, 0}, {1, 1} };
+        int[][] stones1 = { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } };
         System.out.println("Example 1: " + RemoveStones.removeStones(stones1)); // Expected output: 3
 
         // Example 2
-        int[][] stones2 = { {0, 0}, {0, 2}, {1, 1}, {2, 2}, {1, 2}, {2, 1} };
+        int[][] stones2 = { { 0, 0 }, { 0, 2 }, { 1, 1 }, { 2, 2 }, { 1, 2 }, { 2, 1 } };
         System.out.println("Example 2: " + RemoveStones.removeStones(stones2)); // Expected output: 5
 
         // Example 3
-        int[][] stones3 = { {0, 0} };
+        int[][] stones3 = { { 0, 0 } };
         System.out.println("Example 3: " + RemoveStones.removeStones(stones3)); // Expected output: 0
     }
 }

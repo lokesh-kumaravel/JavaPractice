@@ -6,7 +6,7 @@ import java.util.List;
 
 public class RemoveSubfolders {
     public static void main(String[] args) {
-        String[] folder = {"/a", "/a/b", "/c/d", "/c/d/e", "/c/f"};
+        String[] folder = { "/a", "/a/b", "/c/d", "/c/d/e", "/c/f" };
         List<String> result = removeSubfolders(folder);
         System.out.println(result);
     }

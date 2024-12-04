@@ -7,7 +7,10 @@ public class SpiralMatrix {
     static class ListNode {
         int val;
         ListNode next;
-        ListNode(int x) { val = x; }
+
+        ListNode(int x) {
+            val = x;
+        }
     }
 
     public static void main(String[] args) {
@@ -25,7 +28,7 @@ public class SpiralMatrix {
 
         // Generate the spiral matrix
         int[][] matrix = spiralMatrix(m, n, head);
-        
+
         // Print the matrix
         System.out.println("Spiral Matrix:");
         for (int i = 0; i < matrix.length; i++) {
@@ -43,12 +46,12 @@ public class SpiralMatrix {
         int bottom = m - 1;
         int right = n - 1;
         ListNode current = head;
-        
+
         // Initialize the matrix with -1
         for (int i = 0; i < m; i++) {
             Arrays.fill(a[i], -1);
         }
-        
+
         // Fill the matrix in spiral order
         while (left <= right && top <= bottom) {
             // Traverse from left to right along the top row
@@ -59,7 +62,7 @@ public class SpiralMatrix {
                 }
             }
             top++;
-            
+
             // Traverse from top to bottom along the right column
             for (int j = top; j <= bottom; j++) {
                 if (current != null) {
@@ -68,7 +71,7 @@ public class SpiralMatrix {
                 }
             }
             right--;
-            
+
             // Traverse from right to left along the bottom row
             for (int j = right; j >= left; j--) {
                 if (current != null) {
@@ -77,7 +80,7 @@ public class SpiralMatrix {
                 }
             }
             bottom--;
-            
+
             // Traverse from bottom to top along the left column
             for (int j = bottom; j >= top; j--) {
                 if (current != null) {
@@ -87,7 +90,7 @@ public class SpiralMatrix {
             }
             left++;
         }
-        
+
         return a;
     }
 }

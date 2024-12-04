@@ -3,8 +3,8 @@ package LeetCode;
 import java.util.*;
 
 public class smallestChair {
-     public static void main(String[] args) {
-        int[][] times = {{0, 10}, {1, 2}, {2, 3}, {5, 10}};
+    public static void main(String[] args) {
+        int[][] times = { { 0, 10 }, { 1, 2 }, { 2, 3 }, { 5, 10 } };
         int targetFriend = 0;
 
         int targetStart = times[targetFriend][0];
@@ -28,9 +28,9 @@ public class smallestChair {
                 break;
             }
 
-            pq.offer(new int[]{times[i][1], available.poll()});
+            pq.offer(new int[] { times[i][1], available.poll() });
         }
 
         System.out.println("The smallest chair for target friend is: " + chair);
-    }   
+    }
 }
