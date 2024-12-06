@@ -17,6 +17,7 @@ public class DividePlayers {
         return total; 
     }
 
+    
     public static void main(String[] args) {
         int[] skill = {3, 2, 5, 1, 3, 4};
         long result = dividePlayers(skill);

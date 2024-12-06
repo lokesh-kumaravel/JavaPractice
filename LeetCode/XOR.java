@@ -1,5 +1,6 @@
 package LeetCode;
 // 2317. Maximum XOR After Operations 
+
 // Solved
 // Medium
 // Topics
@@ -10,8 +11,6 @@ package LeetCode;
 // Note that AND is the bitwise AND operation and XOR is the bitwise XOR operation.
 
 // Return the maximum possible bitwise XOR of all elements of nums after applying the operation any number of times.
-
- 
 
 // Example 1:
 
@@ -28,7 +27,6 @@ package LeetCode;
 // Explanation: Apply the operation zero times.
 // The bitwise XOR of all the elements = 1 XOR 2 XOR 3 XOR 9 XOR 2 = 11.
 // It can be shown that 11 is the maximum possible bitwise XOR.
- 
 
 // Constraints:
 
@@ -42,13 +40,14 @@ public class XOR {
         }
         return res;
     }
+
     public static void main(String[] args) {
         XOR solution = new XOR();
-        
-        int[] nums = {3, 10, 5, 25, 2, 8};
-        
+
+        int[] nums = { 3, 10, 5, 25, 2, 8 };
+
         int maxXor = solution.maximumXOR(nums);
-        
+
         System.out.println("The maximum XOR value is: " + maxXor);
     }
 }
