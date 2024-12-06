@@ -4,7 +4,7 @@ import java.util.*;
 
 public class FindMatrix {
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3, 4, 1, 2, 3, 4}; // Example input
+        int[] nums = { 1, 2, 3, 4, 1, 2, 3, 4 }; // Example input
 
         List<List<Integer>> ans = new ArrayList<>();
         ans.add(new ArrayList<>());
