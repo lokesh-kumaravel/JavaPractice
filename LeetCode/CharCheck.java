@@ -1,16 +1,17 @@
 
 package LeetCode;
+
 import java.util.HashSet;
 import java.util.Set;
 
 public class CharCheck {
 
     public static void main(String[] args) {
-        String allowed = "ab"; 
-        String[] words = {"ad", "bd", "aaab", "baa", "badab"}; 
+        String allowed = "ab";
+        String[] words = { "ad", "bd", "aaab", "baa", "badab" };
 
         CharCheck mainObj = new CharCheck();
-        
+
         int result = mainObj.countConsistentStrings(allowed, words);
 
         System.out.println("Number of consistent strings: " + result);
@@ -18,20 +19,20 @@ public class CharCheck {
 
     public int countConsistentStrings(String allowed, String[] words) {
         Set<Character> set = new HashSet<>();
-        for(int i = 0; i < allowed.length(); i++) {
+        for (int i = 0; i < allowed.length(); i++) {
             set.add(allowed.charAt(i));
         }
 
         int count = 0;
-        for(String word : words) {
+        for (String word : words) {
             boolean isConsistent = true;
-            for(char ch : word.toCharArray()) {
-                if(!set.contains(ch)) {
+            for (char ch : word.toCharArray()) {
+                if (!set.contains(ch)) {
                     isConsistent = false;
                     break;
                 }
             }
-            if(isConsistent) {
+            if (isConsistent) {
                 count++;
             }
         }

@@ -7,6 +7,7 @@ public class countFairPairs {
         Arrays.sort(nums);
         return countLess(nums, upper) - countLess(nums, lower - 1);
     }
+
     public static long countLess(int[] nums, int val) {
         long res = 0;
         for (int i = 0, j = nums.length - 1; i < j; ++i) {
@@ -17,18 +18,19 @@ public class countFairPairs {
         }
         return res;
     }
+
     public static void main(String[] args) {
-        int[] nums = {1, 3, 5, 7};
+        int[] nums = { 1, 3, 5, 7 };
         int lower = 4;
         int upper = 8;
         System.out.println(countFairPairs(nums, lower, upper));
-        nums = new int[]{1, 2, 3, 4, 5};
+        nums = new int[] { 1, 2, 3, 4, 5 };
         lower = 5;
         upper = 7;
         System.out.println(countFairPairs(nums, lower, upper));
-        nums = new int[]{-1, 0, 1};
+        nums = new int[] { -1, 0, 1 };
         lower = 0;
         upper = 2;
-        System.out.println(countFairPairs(nums, lower, upper)); 
+        System.out.println(countFairPairs(nums, lower, upper));
     }
 }

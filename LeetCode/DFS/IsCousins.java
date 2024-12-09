@@ -1,5 +1,4 @@
 
-
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -8,16 +7,17 @@ class TreeNode {
     TreeNode left;
     TreeNode right;
 
-    TreeNode() {}
+    TreeNode() {
+    }
 
-    TreeNode(int val) { 
-        this.val = val; 
+    TreeNode(int val) {
+        this.val = val;
     }
 
     TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val; 
-        this.left = left; 
-        this.right = right; 
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }
 
@@ -37,8 +37,10 @@ public class IsCousins {
             for (int i = 0; i < n; i++) {
                 TreeNode node = q.poll();
                 if (node.left != null && node.right != null) {
-                    if (node.left.val == x && node.right.val == y) return false;
-                    if (node.left.val == y && node.right.val == x) return false;
+                    if (node.left.val == x && node.right.val == y)
+                        return false;
+                    if (node.left.val == y && node.right.val == x)
+                        return false;
                 }
                 if (node.val == x) {
                     depthx = order;
