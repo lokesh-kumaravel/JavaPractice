@@ -1,21 +1,20 @@
 import java.util.Scanner;
 
 public class SubstringDivision {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int num = s.nextInt();
         int den = s.nextInt();
         s.close();
-        int n = num%den;
+        int n = num % den;
         int k = n;
         int c = 0;
-        do{
+        do {
             c++;
-            int rem = k*10;
-            k = rem%den;
+            int rem = k * 10;
+            k = rem % den;
             System.out.println(k);
-        }while(k!=n);
+        } while (k != n);
         System.out.println(c);
     }
 }
