@@ -12,7 +12,7 @@ public class triangleingraph {
             int n2 = sc.nextInt();
             arr[n1][n2] = 1;
             arr[n2][n1] = 1;
-            
+
         }
         sc.close();
         // int n = maxVertex + 1;

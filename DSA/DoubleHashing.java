@@ -6,20 +6,21 @@ import java.util.Scanner;
 public class DoubleHashing {
     private static int[] table;
     private static int size;
+
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
-        size = s.nextInt(); 
+        size = s.nextInt();
         int[] elements = new int[size];
-        
+
         for (int i = 0; i < size; i++) {
             elements[i] = s.nextInt();
         }
-        
+
         table = new int[size];
-        Arrays.fill(table, -1); 
+        Arrays.fill(table, -1);
         insert(elements);
         display();
-        
+
         s.close();
     }
 

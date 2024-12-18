@@ -1,8 +1,10 @@
 package DSA;
 
 import java.util.*;
+
 public class Farmer {
     static long[] dis, edge;
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int group = sc.nextInt();
