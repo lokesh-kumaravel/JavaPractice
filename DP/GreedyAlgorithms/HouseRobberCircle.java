@@ -1,15 +1,15 @@
 package DP.GreedyAlgorithms;
+
 import java.util.Scanner;
+
 public class HouseRobberCircle {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         String a = s.nextLine();
         int n = 0;
         char[] str = a.toCharArray();
-        for(int i = 0;i<str.length;i++)
-        {
-            if(str[i]==',')
-            {
+        for (int i = 0; i < str.length; i++) {
+            if (str[i] == ',') {
                 n++;
             }
         }
@@ -22,6 +22,7 @@ public class HouseRobberCircle {
         int result = rob(nums);
         System.out.println(result);
     }
+
     public static int rob(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
@@ -34,6 +35,7 @@ public class HouseRobberCircle {
         int max2 = robLinear(nums, 1, nums.length - 1);
         return Math.max(max1, max2);
     }
+
     private static int robLinear(int[] nums, int start, int end) {
         int prev2 = 0;
         int prev1 = 0;
