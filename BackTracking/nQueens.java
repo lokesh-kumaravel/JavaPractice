@@ -1,8 +1,9 @@
 public class nQueens {
     public static void main(String[] args) {
-        int n = 4;  // Example input
+        int n = 4; // Example input
         solveNQueens(n);
     }
+
     public static void solveNQueens(int n) {
         char[][] board = new char[n][n];
         for (int i = 0; i < n; i++) {
@@ -17,6 +18,7 @@ public class nQueens {
             System.out.println("No solution found");
         }
     }
+
     public static char[][] solve(int row, char[][] board) {
         if (row == board.length) {
             return copyBoard(board);
@@ -33,6 +35,7 @@ public class nQueens {
         }
         return null;
     }
+
     public static boolean isSafe(char[][] board, int row, int col) {
         // Check column
         for (int i = 0; i < row; i++) {

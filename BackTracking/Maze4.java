@@ -1,6 +1,7 @@
 // package BackTracking;
 
 import java.util.Scanner;
+
 public class Maze4 {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -31,7 +32,7 @@ public class Maze4 {
     static int mincount = Integer.MAX_VALUE;
 
     private static boolean find(int i, int j, int[][] a, int[][] solution, int[][] best, int n, int count) {
-        if ((i == n - 1 && j == n - 1 && a[n - 1][n - 1] == 0)||(i==0&&j==n-1&&a[0][n-1]==0)) {
+        if ((i == n - 1 && j == n - 1 && a[n - 1][n - 1] == 0) || (i == 0 && j == n - 1 && a[0][n - 1] == 0)) {
             solution[i][j] = 1;
             if (count < mincount) {
                 mincount = count;
