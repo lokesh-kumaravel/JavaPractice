@@ -38,7 +38,7 @@ public class RiddleSphinx {
     int d = sc.nextInt();
     System.out.println(Arrays.toString(questions[4]) + ": ");
     int e = sc.nextInt();
-    LocalTime st = LocalTime.now(); 
+    LocalTime st = LocalTime.now();
 
     if (b + c + d == a || (b * 3 + c * 2 + d * 1) == e) {
       System.out.println("Answer: " + b + " " + c + " " + d);
@@ -58,8 +58,8 @@ public class RiddleSphinx {
       }
     }
 
-    LocalTime et = LocalTime.now(); 
-    Duration duration = Duration.between(st, et); 
+    LocalTime et = LocalTime.now();
+    Duration duration = Duration.between(st, et);
 
     System.out.println("Execution time: " + duration.toMillis() + " milliseconds");
 

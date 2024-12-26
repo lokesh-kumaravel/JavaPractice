@@ -1,5 +1,7 @@
 package Level4.Codeforces;
+
 import java.util.Scanner;
+
 public class Password {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

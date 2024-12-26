@@ -10,6 +10,6 @@ public class TiltingTiles {
                 { '.', 'b', '.', '.' },
                 { '.', 'y', 'r', '.' },
         };
-        
+
     }
 }

@@ -1,5 +1,7 @@
 package Level4.Codeforces;
+
 import java.util.*;
+
 public class JobInterveiw {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
