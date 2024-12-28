@@ -19,6 +19,7 @@ public class ReverseOddLevels {
         System.out.println("\nModified tree:");
         printTree(root);
     }
+
     public static void printTree(TreeNode root) {
         if (root == null) {
             return;
