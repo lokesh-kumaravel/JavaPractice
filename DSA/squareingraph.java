@@ -7,7 +7,7 @@ public class squareingraph {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[][] arr = new int[n][n];
-        for(int i = 0 ; i < n ; i++){
+        for (int i = 0; i < n; i++) {
             int e = sc.nextInt();
         }
         while (sc.hasNextInt()) {
@@ -15,7 +15,7 @@ public class squareingraph {
             int n2 = sc.nextInt();
             arr[n1][n2] = 1;
             arr[n2][n1] = 1;
-            
+
         }
         sc.close();
         int[][] arr1 = new int[n][n];
@@ -39,6 +39,6 @@ public class squareingraph {
             trace += arr2[i][i];
         }
 
-        System.out.print(trace/8);
+        System.out.print(trace / 8);
     }
 }
