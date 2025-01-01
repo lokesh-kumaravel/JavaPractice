@@ -38,7 +38,7 @@ public class Island {
         System.out.print("Count of Island: ");
         System.out.print(count - 1);
     }
-    
+
     private static boolean find(int[][] a, int i, int j, int n) {
         if (i >= 0 && i <= n - 1 && j >= 0 && j <= n - 1 && solution[i][j] == 0 && a[i][j] != 0) {
             solution[i][j] = count;
@@ -55,16 +55,16 @@ public class Island {
             if (find(a, i, j - 1, n)) {
                 return true;
             }
-            if (find(a, i-1, j + 1, n)) {
+            if (find(a, i - 1, j + 1, n)) {
                 return true;
             }
-            if (find(a, i-1, j - 1, n)) {
+            if (find(a, i - 1, j - 1, n)) {
                 return true;
             }
-            if (find(a, i+1, j - 1, n)) {
+            if (find(a, i + 1, j - 1, n)) {
                 return true;
             }
-            if (find(a, i+1, j + 1, n)) {
+            if (find(a, i + 1, j + 1, n)) {
                 return true;
             }
             return false;
