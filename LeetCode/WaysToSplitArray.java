@@ -24,7 +24,6 @@ public class WaysToSplitArray {
     public static void main(String[] args) {
         WaysToSplitArray solution = new WaysToSplitArray();
 
-        // Example usage
         int[] nums = { 10, 4, 1, 3, 5, 2 };
         int result = solution.waysToSplitArray(nums);
 
