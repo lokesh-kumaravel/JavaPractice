@@ -4,22 +4,19 @@ public class RedBallInDiagonal {
     public static void main(String[] args) {
         int n = 2;
         char[][] a = {
-            {'G','R'},
-            {'R','G'}
+                { 'G', 'R' },
+                { 'R', 'G' }
         };
-        int moves = FindMoves(n,a);
-        System.out.println("Minimum no of Moves:"+moves);
+        int moves = FindMoves(n, a);
+        System.out.println("Minimum no of Moves:" + moves);
     }
-    public static int FindMoves(int n,char[][] a)
-    {
+
+    public static int FindMoves(int n, char[][] a) {
         int[] markLastRedBallsinRow = new int[n];
-        for(int i = 0;i<n;i++)
-        {
+        for (int i = 0; i < n; i++) {
             int pos = -1;
-            for(int j = 0;j<n;j++)
-            {
-                if(a[i][j]=='R')
-                {
+            for (int j = 0; j < n; j++) {
+                if (a[i][j] == 'R') {
                     pos = j;
                 }
             }
@@ -28,26 +25,21 @@ public class RedBallInDiagonal {
         }
         int moves = 0;
 
-        for(int i = 0;i<n;i++)
-        {
-            if(markLastRedBallsinRow[i]<=i)
-            {
+        for (int i = 0; i < n; i++) {
+            if (markLastRedBallsinRow[i] <= i) {
                 continue;
             }
             int j = i;
-            while(j<n&&markLastRedBallsinRow[j]>i)
-            {
+            while (j < n && markLastRedBallsinRow[j] > i) {
                 j++;
             }
-            if(j==n)
-            {
+            if (j == n) {
                 return -1;
             }
-            while(j>i)
-            {
+            while (j > i) {
                 int temp = markLastRedBallsinRow[j];
-                markLastRedBallsinRow[j] = markLastRedBallsinRow[j-1];
-                markLastRedBallsinRow[j-1] = temp;
+                markLastRedBallsinRow[j] = markLastRedBallsinRow[j - 1];
+                markLastRedBallsinRow[j - 1] = temp;
                 j--;
                 moves++;
             }
