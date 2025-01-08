@@ -1,5 +1,7 @@
 package Level8;
-import java.util.*; 
+
+import java.util.*;
+
 public class ValidIpAddresses {
     public List<String> restoreIpAddresses(String s) {
         List<String> result = new ArrayList<>();
@@ -18,12 +20,15 @@ public class ValidIpAddresses {
         }
 
         for (int i = 1; i <= 3; i++) {
-            if (start + i > s.length()) break;
+            if (start + i > s.length())
+                break;
             String part = s.substring(start, start + i);
-            if ((part.startsWith("0") && part.length() > 1) || Integer.parseInt(part) > 255) continue;
+            if ((part.startsWith("0") && part.length() > 1) || Integer.parseInt(part) > 255)
+                continue;
             restoreIp(s, start + i, currentIp + part + (segment == 3 ? "" : "."), result, segment + 1);
         }
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
