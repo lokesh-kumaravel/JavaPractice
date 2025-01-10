@@ -56,9 +56,9 @@ public class Profit {
         Solution solution = profit.new Solution();
 
         // Sample input
-        int[] startTime = {1, 2, 3, 4, 6};
-        int[] endTime = {3, 5, 10, 6, 9};
-        int[] profit = {20, 20, 100, 70, 60};
+        int[] startTime = { 1, 2, 3, 4, 6 };
+        int[] endTime = { 3, 5, 10, 6, 9 };
+        int[] profit = { 20, 20, 100, 70, 60 };
 
         // Call the jobScheduling method and print the result
         int maxProfit = solution.jobScheduling(startTime, endTime, profit);

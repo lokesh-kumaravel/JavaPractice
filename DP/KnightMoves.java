@@ -1,5 +1,6 @@
 
 package DP;
+
 import java.util.*;
 
 public class KnightMoves {
@@ -38,7 +39,7 @@ public class KnightMoves {
                     }
                 }
             }
-        // System.out.println(Arrays.toString(sol));
+            // System.out.println(Arrays.toString(sol));
         }
 
         // KnightMoves.printSol(sol);
@@ -52,10 +53,10 @@ public class KnightMoves {
     private static void printSol(int[][] sol) {
         System.out.println(Arrays.toString(sol));
         // for (int[] row : sol) {
-        //     for (int cell : row) {
-        //         System.out.print(cell + " ");
-        //     }
-        //     System.out.println();
+        // for (int cell : row) {
+        // System.out.print(cell + " ");
+        // }
+        // System.out.println();
         // }
     }
 }
