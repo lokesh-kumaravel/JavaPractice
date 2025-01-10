@@ -7,7 +7,7 @@ class Solution {
     public int maxWidthRamp(int[] A) {
         List<Integer> s = new ArrayList<>();
         int res = 0, n = A.length;
-        
+
         for (int i = 0; i < n; ++i) {
             if (s.size() == 0 || A[i] < A[s.get(s.size() - 1)]) {
                 s.add(i);
@@ -29,7 +29,7 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        int[] A = {6, 0, 8, 2, 1, 5};
+        int[] A = { 6, 0, 8, 2, 1, 5 };
         int result = solution.maxWidthRamp(A);
         System.out.println("Maximum Width Ramp: " + result);
     }

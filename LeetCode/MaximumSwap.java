@@ -19,6 +19,6 @@ public class MaximumSwap {
                 digit[j] = temp;
             }
         }
-        System.out.println("Maximum swap for " + num + ": " + max); 
+        System.out.println("Maximum swap for " + num + ": " + max);
     }
 }
