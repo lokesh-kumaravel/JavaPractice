@@ -2,9 +2,9 @@ package LeetCode;
 
 public class LongestDiverseString {
     public static void main(String[] args) {
-        int a = 1; 
-        int b = 1; 
-        int c = 7; 
+        int a = 1;
+        int b = 1;
+        int c = 7;
         String result = longestDiverseString(a, b, c);
         System.out.println(result);
     }
@@ -15,7 +15,7 @@ public class LongestDiverseString {
         int Bcount = 0;
         int Ccount = 0;
         StringBuilder sb = new StringBuilder();
-        
+
         for (int i = 0; i < size; i++) {
             if ((a >= b && a >= c && Acount < 2) || (Bcount == 2 && a > 0) || (Ccount == 2 && a > 0)) {
                 sb.append("a");
