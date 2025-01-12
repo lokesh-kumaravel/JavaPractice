@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class lexicalOrder {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         int n = 13;
         List<Integer> list = new ArrayList<Integer>();
         String[] a = new String[n];

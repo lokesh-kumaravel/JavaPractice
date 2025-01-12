@@ -2,7 +2,7 @@ package LeetCode;
 
 public class MakeFancyString {
     public static void main(String[] args) {
-        String s = "aaabaaaa";  
+        String s = "aaabaaaa";
         StringBuilder str = new StringBuilder();
         str.append(s.charAt(0));
         char prev = s.charAt(0);

@@ -4,7 +4,7 @@ import java.util.PriorityQueue;
 
 public class MaxKelements {
     public static void main(String[] args) {
-        int[] nums = {10, 5, 3};
+        int[] nums = { 10, 5, 3 };
         int k = 2;
         long score = 0;
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a);
