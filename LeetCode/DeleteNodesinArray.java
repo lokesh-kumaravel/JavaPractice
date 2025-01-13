@@ -8,9 +8,18 @@ public class DeleteNodesinArray {
     public static class ListNode {
         int val;
         ListNode next;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+
+        ListNode() {
+        }
+
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
     }
 
     // Method to modify the linked list
@@ -54,7 +63,7 @@ public class DeleteNodesinArray {
         ListNode head = new ListNode(1, node2);
 
         // Define the nums array with values to remove
-        int[] nums = {6, 2};
+        int[] nums = { 6, 2 };
 
         // Call the modifiedList method
         ListNode modifiedHead = modifiedList(nums, head);

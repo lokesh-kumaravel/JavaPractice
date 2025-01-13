@@ -4,20 +4,20 @@ public class CountIsland2Grids {
     public static void main(String[] args) {
         // Define the grids
         int[][] grid1 = {
-            {1, 1, 0, 0, 0},
-            {1, 1, 0, 0, 0},
-            {0, 0, 1, 1, 0},
-            {0, 0, 1, 1, 1},
-            {0, 0, 0, 0, 0}
+                { 1, 1, 0, 0, 0 },
+                { 1, 1, 0, 0, 0 },
+                { 0, 0, 1, 1, 0 },
+                { 0, 0, 1, 1, 1 },
+                { 0, 0, 0, 0, 0 }
         };
         int[][] grid2 = {
-            {1, 1, 0, 0, 0},
-            {0, 1, 0, 0, 0},
-            {0, 0, 1, 1, 0},
-            {0, 0, 0, 1, 1},
-            {0, 0, 0, 0, 0}
+                { 1, 1, 0, 0, 0 },
+                { 0, 1, 0, 0, 0 },
+                { 0, 0, 1, 1, 0 },
+                { 0, 0, 0, 1, 1 },
+                { 0, 0, 0, 0, 0 }
         };
-        
+
         // Create an instance of CountIsland2Grids and call countSubIslands
         CountIsland2Grids instance = new CountIsland2Grids();
         int result = instance.countSubIslands(grid1, grid2);
@@ -29,7 +29,7 @@ public class CountIsland2Grids {
         int n = grid1.length;
         int m = grid1[0].length;
         int c = 0;
-        
+
         // Remove parts of grid2 that are not sub-islands
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -38,7 +38,7 @@ public class CountIsland2Grids {
                 }
             }
         }
-        
+
         // Count the remaining islands in grid2 which are sub-islands
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
@@ -48,7 +48,7 @@ public class CountIsland2Grids {
                 }
             }
         }
-        
+
         return c;
     }
 

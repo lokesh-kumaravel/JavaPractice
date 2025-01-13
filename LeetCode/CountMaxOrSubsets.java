@@ -2,7 +2,7 @@ package LeetCode;
 
 public class CountMaxOrSubsets {
     public static void main(String[] args) {
-        int[] nums = {1, 2, 3};
+        int[] nums = { 1, 2, 3 };
         int maxOrValue = 0;
         for (int num : nums) {
             maxOrValue |= num;
