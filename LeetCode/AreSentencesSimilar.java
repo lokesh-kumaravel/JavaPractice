@@ -4,7 +4,7 @@ public class AreSentencesSimilar {
     public static void main(String[] args) {
         class Solution {
             public boolean areSentencesSimilar(String s1, String s2) {
-                if(s1.length() < s2.length()) {
+                if (s1.length() < s2.length()) {
                     String temp = s1;
                     s1 = s2;
                     s2 = temp;
@@ -15,10 +15,10 @@ public class AreSentencesSimilar {
                 int n2 = b.length;
                 int start = 0;
                 int end = 0;
-                while(start < n2 && a[start].equals(b[start])) {
+                while (start < n2 && a[start].equals(b[start])) {
                     start++;
                 }
-                while(end < n2 && a[n1 - end - 1].equals(b[n2 - end - 1])) {
+                while (end < n2 && a[n1 - end - 1].equals(b[n2 - end - 1])) {
                     end++;
                 }
                 return start + end >= n2;
