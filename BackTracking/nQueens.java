@@ -1,6 +1,6 @@
 public class nQueens {
     public static void main(String[] args) {
-        int n = 4; // Example input
+        int n = 4;
         solveNQueens(n);
     }
 
@@ -18,7 +18,6 @@ public class nQueens {
             System.out.println("No solution found");
         }
     }
-
     public static char[][] solve(int row, char[][] board) {
         if (row == board.length) {
             return copyBoard(board);
