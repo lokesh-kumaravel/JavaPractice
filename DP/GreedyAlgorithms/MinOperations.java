@@ -2,7 +2,7 @@ package DP.GreedyAlgorithms;
 
 import java.util.Scanner;
 
-public class From0toN {
+public class MinOperations {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int t = s.nextInt();

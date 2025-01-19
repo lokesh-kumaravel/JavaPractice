@@ -27,6 +27,7 @@ public class MinOperations {
         Solution solution = new Solution();
         String boxe = "110";
         int[] result = solution.minOperations(boxe);
+        System.out.println("Answer : ");
         for (int ops : result) {
             System.out.print(ops + " ");
         }

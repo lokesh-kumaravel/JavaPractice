@@ -50,6 +50,21 @@ public class MaxRectangle {
             for (int j = 0; j < cols; j++) {
                 maxA = Math.max(maxA, (right[j] - left[j]) * height[j]);
             }
+            System.out.println("Interation : " + (i + 1));
+            System.out.print("Height : ");
+            for (int val : height) {
+                System.out.print(val + " ");
+            }
+            System.out.print("left : ");
+            for (int val : left) {
+                System.out.print(val + " ");
+            }
+            System.out.print("right : ");
+            for (int val : right) {
+                System.out.print(val + " ");
+            }
+            System.out.print("maxA : " + maxA);
+            System.out.println();
         }
 
         return maxA;
