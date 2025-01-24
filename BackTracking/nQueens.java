@@ -18,6 +18,7 @@ public class nQueens {
             System.out.println("No solution found");
         }
     }
+
     public static char[][] solve(int row, char[][] board) {
         if (row == board.length) {
             return copyBoard(board);
