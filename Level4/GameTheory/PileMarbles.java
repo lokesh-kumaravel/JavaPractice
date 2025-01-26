@@ -62,3 +62,43 @@ public class PileMarbles {
         }
     }
 }
+
+// import java.util.*;
+// public class Main{
+//     public static void main(String[] args)
+//     {
+//         Scanner sc=new Scanner(System.in);
+//         String str=sc.nextLine();
+//         String[] s=str.replaceAll("\\[","").replaceAll("\\]","").split(",");
+//         int[] arr=new int[s.length];
+//         for(int i=0;i<arr.length;i++)
+//         {
+//             arr[i]=Integer.parseInt(s[i]);
+//         }
+//         boolean f=true;
+//         int rc=0,kc=0;
+//         for(int i=0;i<arr.length;i++)
+//         {
+//             if(f)
+//             {
+//                 rc+=arr[i];
+//                 f=false;
+//             }
+//             else
+//             {
+//                 kc+=arr[i];
+//                 f=true;
+//             }
+//         }
+//         if(rc>kc)
+//         {
+//         System.out.println("true");
+            
+//         }
+//         else
+//         {
+            
+//         System.out.println("false");
+//         }
+//     }
+// }
