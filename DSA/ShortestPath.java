@@ -30,22 +30,18 @@ public class ShortestPath {
     public static int BFS(int start, int end, int n) {
         Queue<Integer> q = new LinkedList<Integer>();
         int[] d = new int[n];
-        Arrays.fill(d,-1);
+        Arrays.fill(d, -1);
         q.add(start);
         d[start] = 0;
-        while(!q.isEmpty())
-        {
+        while (!q.isEmpty()) {
             int k = q.remove();
-            if(k==end)
-            {
+            if (k == end) {
                 return d[end];
             }
-            for(int i = 0;i<list.get(k).size();i++)
-            {
-                if(d[list.get(k).get(i)]==-1)
-                {
+            for (int i = 0; i < list.get(k).size(); i++) {
+                if (d[list.get(k).get(i)] == -1) {
                     q.add(list.get(k).get(i));
-                    d[list.get(k).get(i)] = d[k]+1;
+                    d[list.get(k).get(i)] = d[k] + 1;
                 }
             }
         }
