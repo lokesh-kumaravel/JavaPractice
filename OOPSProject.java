@@ -7,6 +7,7 @@ interface moneyTransfer {
 class upi implements moneyTransfer {
     public void sendmoney() {
         // This function actually connects with payment gateway and uses the swift code
+        // gateway
         // to transfer money between accounts
     }
 }

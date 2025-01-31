@@ -1,6 +1,7 @@
 package Level4;
 
 import java.util.*;
+
 public class Rotationmat {
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
@@ -41,6 +42,7 @@ public class Rotationmat {
         }
         System.out.println("]");
     }
+
     public static void rotate(int[][] matrix) {
         int n = matrix.length;
         for (int i = 0; i < n; i++) {
