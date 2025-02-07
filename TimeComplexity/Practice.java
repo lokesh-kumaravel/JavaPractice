@@ -2,7 +2,7 @@ package TimeComplexity;
 
 public class Practice {
     public static void main(String[] ags) {
-        int n = 500000/2;
+        int n = 500000 / 2;
         int count = 0;
         while (n > 0) {
             n /= 2;
