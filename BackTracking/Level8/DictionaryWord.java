@@ -1,8 +1,10 @@
 package Level8;
 
 import java.util.*;
+
 public class DictionaryWord {
-    static String dictionary[] = {"mobile", "it", "vac", "itvac", "man", "mango", "icecream", "and", "go", "i", "love", "ice", "cream"};
+    static String dictionary[] = { "mobile", "it", "vac", "itvac", "man", "mango", "icecream", "and", "go", "i", "love",
+            "ice", "cream" };
 
     public static List<String> wordBreak(String s, Set<String> dict) {
         return wordBreakHelper(s, dict, "");
@@ -32,14 +34,13 @@ public class DictionaryWord {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         s.nextLine();
-        for(int i = 0;i<n;i++)
-        {
-        String input = s.nextLine();
-        // System.out.println(input);
-        List<String> results = wordBreak(input, dict);
-        for (String sentence : results) {
-            System.out.println(sentence);
-        }
+        for (int i = 0; i < n; i++) {
+            String input = s.nextLine();
+            // System.out.println(input);
+            List<String> results = wordBreak(input, dict);
+            for (String sentence : results) {
+                System.out.println(sentence);
+            }
         }
     }
 }
