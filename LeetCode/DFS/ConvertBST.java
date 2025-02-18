@@ -1,13 +1,13 @@
 
-
 public class ConvertBST {
-    
+
     public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
 
-        TreeNode() {}
+        TreeNode() {
+        }
 
         TreeNode(int val) {
             this.val = val;
@@ -20,7 +20,8 @@ public class ConvertBST {
         }
     }
 
-    private int sum = 0; 
+    private int sum = 0;
+
     public TreeNode convertBST(TreeNode root) {
         dfs(root);
         return root;

@@ -9,7 +9,8 @@ public class DeepestLeavesSum {
         TreeNode left;
         TreeNode right;
 
-        TreeNode() {}
+        TreeNode() {
+        }
 
         TreeNode(int val) {
             this.val = val;
@@ -23,25 +24,26 @@ public class DeepestLeavesSum {
     }
 
     public int deepestLeavesSum(TreeNode root) {
-        if (root == null) return 0; 
+        if (root == null)
+            return 0;
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         int sum = 0;
 
         while (!q.isEmpty()) {
-            sum = 0; 
-            int n = q.size(); 
+            sum = 0;
+            int n = q.size();
             for (int i = 0; i < n; i++) {
                 TreeNode node = q.poll();
-                sum += node.val; 
+                sum += node.val;
                 if (node.left != null) {
-                    q.add(node.left); 
+                    q.add(node.left);
                 }
                 if (node.right != null) {
-                    q.add(node.right); 
+                    q.add(node.right);
                 }
             }
         }
-        return sum; 
+        return sum;
     }
 }
