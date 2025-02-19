@@ -1,10 +1,11 @@
 abstract class Shape {
-    abstract double area(); 
-    abstract double perimeter(); 
+    abstract double area();
+
+    abstract double perimeter();
 }
 
 interface Drawable {
-    void draw(); 
+    void draw();
 }
 
 class Circle extends Shape implements Drawable {
@@ -59,8 +60,8 @@ public class Oops {
         Shape circle = new Circle(5);
         System.out.println("Area of Circle: " + circle.area());
         System.out.println("Perimeter of Circle: " + circle.perimeter());
-        ((Drawable) circle).draw(); 
-    
+        ((Drawable) circle).draw();
+
         Shape rectangle = new Rectangle(4, 6);
         System.out.println("Area of Rectangle: " + rectangle.area());
         System.out.println("Perimeter of Rectangle: " + rectangle.perimeter());
