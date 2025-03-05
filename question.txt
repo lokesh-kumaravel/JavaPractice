@@ -1,0 +1,15 @@
+1. ASCII value of each character in a string (also the space).
+2. Reverse a string without inbuilt function.
+3. Extract a numbers in a sentence ans reverse it.
+4. Read a string and reverse only the numers in the string.
+5. Sum of consecutive numbers in an array without using the loop.
+6. Sum of first n natural numers in the array.
+7. Sum of missing numbers in consecutive series.
+8. Count of missing numbers in the list.
+9. Sum of elements below the diagonal.
+10. Print the matrix in spiral form.
+11. Print each row in the matrix in zigzag (1-l->r , 2- r->l)
+12. Count of palindromes in a string.
+13. Count of anagram words in a sentence.
+14. Print the possible palindrome words in a sentence.
+15. Read a string replace the vowels with 'A', consonants and digits with 'a', space and special characters with 'A', count the occurrences of both a's.
