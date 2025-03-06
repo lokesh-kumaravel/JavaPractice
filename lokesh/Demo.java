@@ -7,7 +7,6 @@ public class Demo {
         int n = 43;
         ArrayList<Integer> result = find(n);
         System.out.println(result);
-        // System.out.println(s1);
         StringOperations obj = new StringOperations();
         System.out.println(obj.s1);
     }
