@@ -18,7 +18,6 @@ public class BSTdistance {
         }
         System.out.println();
         display(root);
-        // System.out.println(root.data);
     }
 
     public static Node display(Node root) {
