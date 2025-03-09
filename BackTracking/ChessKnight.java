@@ -73,7 +73,7 @@ public class ChessKnight {
 // }
 // static int mincount = Integer.MAX_VALUE;
 // private static boolean find(int i,int j,int row,int column,int[][] a,int
-// count)
+ count)
 // {
 // if(i==row&&j==column&&a[i][j]==0)
 // {
