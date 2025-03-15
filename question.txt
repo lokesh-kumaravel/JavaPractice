@@ -13,3 +13,22 @@
 13. Count of anagram words in a sentence.
 14. Print the possible palindrome words in a sentence.
 15. Read a string replace the vowels with 'A', consonants and digits with 'a', space and special characters with 'A', count the occurrences of both a's.
+
+
+
+
+1. write a program to print the elements with first largets and first smallest as a list in adjacent manner.
+2. write a program to count the vowels, consonants, digits, special characters if all sum  = double digit then add sum of digits.
+3. write a program to read a string, reverse the alternate characters in it.
+4. write a progam to read a string and print the words that has consecutie vowels on it.
+5. write a program to read a matrix and sum each row of the matrix.
+6. write a program to read a matrix and sum each column of the matrix.
+7. write a program to read a string and extract the numbers in it and perform reverse number.
+8. write a program to perform sum of squares of individual digits.
+9. Alternate digits in a number.
+10. write a program to read an array and perform even numbers sorting.
+
+11. Write a program to print the elements from both the end of the array.
+12. develop a program to check which end of the list has max element , remoe the max and check max elementin both sides untill the size becomes 1.
+13. Develop a program to read a 2D array and print each row in the fashion that elements at the end should be printed first.
+14. To sort the 2D array.
