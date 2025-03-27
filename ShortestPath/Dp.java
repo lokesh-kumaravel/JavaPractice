@@ -18,7 +18,7 @@ public class Dp {
         for (int i = 0; i < R; i++) {
             for (int j = 0; j < C; j++) {
                 if (grid[i][j] == 0) {
-                    continue; // Skip blocked cells
+                    continue;
                 }
 
                 if (i > 0 && dp[i - 1][j] != Integer.MAX_VALUE) {
@@ -31,7 +31,6 @@ public class Dp {
             }
         }
 
-        // If destination is unreachable, return -1
         return dp[R - 1][C - 1] == Integer.MAX_VALUE ? -1 : dp[R - 1][C - 1];
     }
 
