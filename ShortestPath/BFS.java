@@ -42,6 +42,7 @@ public class BFS {
             int srcX = val[0];
             int srcY = val[1];
             int dest = val[2];
+            System.out.println(Arrays.toString(val));
             if (dx == srcX && dy == srcY) {
                 return dest;
             }
