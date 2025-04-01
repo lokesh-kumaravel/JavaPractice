@@ -30,3 +30,22 @@
 12. develop a program to check which end of the list has max element , remoe the max and check max elementin both sides untill the size becomes 1.
 13. Develop a program to read a 2D array and print each row in the fashion that elements at the end should be printed first.
 14. To sort the 2D array.
+
+
+
+1.reverse an array.
+2.separate even and odd elements in the array.
+3.arrange the elements in the array 0 in right ans 1 in left
+4. read a sentence reverse individual words in the sentence
+5. read a sentence sort the words in alphabet order
+6. read a 2D array and print the diagonal and anti diagonal find the abs difference between primary and sec diagonal elements
+7.reverse the 2D array  1. row reverse 2. column reverse
+9.read a string to print the consecutive consonants in words 
+10.a10 a will print in 10 times
+
+Questions :
+1.list and arraylist
+2.what is string
+3. what is inheritance.
+4. differenvce between arrray and linked list.
+5. memory heap and stack.
