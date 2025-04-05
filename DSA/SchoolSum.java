@@ -4,10 +4,10 @@ import java.util.*;
 
 public class SchoolSum {
     public static void main(String[] args) {
-        int n = 1;
-        int m = 7;
-        int k = 5;
-        int[][] a = { { 2, 1, 0, 1, 3, 0, 1 } };
+        int n = 3;
+        int m = 2;
+        int k = 3;
+        // int[][] a = { { 2, 1, 0, 1, 3, 0, 1 } };
         // int[][] a = {
         // { 3, 2, 1, 0, 4 },
         // { 1, 0, 3, 2, 1 },
@@ -15,64 +15,71 @@ public class SchoolSum {
         // { 0, 1, 2, 3, 1 },
         // { 4, 2, 1, 0, 3 },
         // };
-        int max = 0;
-        boolean[][] visited = new boolean[n][m];
-        // int kk = find(a, 2, 3, k + 1, visited);
-        // System.out.println(kk);
+        int[][] a = { { 0, 2 }, { 1, 0 }, { 1, 0 } };
         int min = Integer.MAX_VALUE;
+        int availableCapacity = 0;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (a[i][j] != 0) {
-                    int kk = find(a, i, j, k + 1, visited);
-                    // System.out.println(kk);
+                    availableCapacity += a[i][j];
+                    int kk = find(a, i, j, k + 1);
                     if (kk != -1) {
                         min = Math.min(kk, min);
                     }
                 }
             }
         }
-        System.out.println(min);
+        if (availableCapacity < k + 1) {
+            System.out.println("Rooms not available...");
+            return;
+        }
+        System.out.println(min == Integer.MAX_VALUE ? -1 : min);
     }
 
-    public static int[][] dir = { { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 }, { -1, -1 }, { -1, +1 }, { 1, -1 },
-            { 1, 1 } };
+    public static int[][] dir = {
+            { 1, 0 }, { 0, 1 }, { -1, 0 }, { 0, -1 },
+            { -1, -1 }, { -1, +1 }, { 1, -1 }, { 1, 1 }
+    };
 
-    public static int find(int[][] a, int i, int j, int cap, boolean[][] visited) {
+    public static int find(int[][] a, int i, int j, int cap) {
+        int n = a.length, m = a[0].length;
+        boolean[][] visited = new boolean[n][m];
         Queue<int[]> q = new LinkedList<>();
-        q.add(new int[] { i, j, a[i][j] });
+        q.add(new int[] { i, j });
         visited[i][j] = true;
-        int c = -1;
-        int cur = 0;
-        while (!q.isEmpty() && cap > 0) {
-            int[] ver = q.poll();
-            int x = ver[0];
-            int y = ver[1];
-            int val = ver[2];
-            // System.out.println(Arrays.toString(ver));
-            if (val != 0) {
-                cur += val;
-                // System.out.println(cur);
-                if (cap <= cur) {
-                    // System.out.println(cur);
-                    return c;
+        int level = 0;
+        int currentCapacity = 0;
+        // System.out.println(currentCapacity + " but cap : " + cap);
+        while (!q.isEmpty()) {
+            int size = q.size();
+
+            for (int s = 0; s < size; s++) {
+                int[] curr = q.poll();
+                // System.out.println(Arrays.toString(curr));
+                int x = curr[0], y = curr[1];
+
+                currentCapacity += a[x][y];
+                if (currentCapacity >= cap) {
+                    // System.out.println(currentCapacity + " but cap : " + cap + " level : " +
+                    // level);
+                    return level;
                 }
-                c++;
-            }
-            visited[x][y] = true;
-            // System.out.println(c);
-            for (int m = 0; m < dir.length; m++) {
-                int newX = x + dir[m][0];
-                int newY = y + dir[m][1];
-                if (isValid(newX, newY, a, visited)) {
-                    // System.out.println("cap");
-                    q.add(new int[] { newX, newY, a[newX][newY] });
+
+                for (int[] d : dir) {
+                    int nx = x + d[0], ny = y + d[1];
+                    if (isValid(nx, ny, a, visited)) {
+                        visited[nx][ny] = true;
+                        q.add(new int[] { nx, ny });
+                    }
                 }
             }
+            level++;
         }
+
         return -1;
     }
 
     public static boolean isValid(int i, int j, int[][] a, boolean[][] visited) {
-        return (i >= 0 && i < a.length && j >= 0 && j < a[0].length && !visited[i][j]);
+        return i >= 0 && i < a.length && j >= 0 && j < a[0].length && !visited[i][j];
     }
 }
