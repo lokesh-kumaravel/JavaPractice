@@ -1,3 +1,5 @@
+package csef;
+
 import java.util.*;
 
 public class NumberSpiral {
