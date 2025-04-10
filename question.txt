@@ -49,3 +49,12 @@ Questions :
 3. what is inheritance.
 4. differenvce between arrray and linked list.
 5. memory heap and stack.
+
+
+
+1. Level completion data structure, 
+2. Interview preparations
+3. courses completion
+4. c aptitude
+5. Communication
+6. Acheivements
