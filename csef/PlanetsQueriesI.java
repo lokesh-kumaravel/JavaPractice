@@ -38,5 +38,4 @@ public class PlanetsQueriesI {
         }
         return current;
     }
-
 }
